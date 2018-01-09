@@ -36,3 +36,93 @@ particlesJS.load(
         .fromTo(astronaut, 5, {rotation: "-=5", y: -5, x: 20, ease: Sine.easeInOut}, {rotation: "0", y: 0, x: 0, ease: Sine.easeInOut});;
 
 })(jQuery);
+
+
+// JWPLayers Setup
+jwplayer("KBProcessVid").setup({
+    "skin": {
+        "name": "kineticbeats"
+    },
+    "file": "http://content.jwplatform.com/videos/6isgoXbx-QtYW5DgW.mp4",
+    "image": "http://content.jwplatform.com/thumbs/6isgoXbx-1280.jpg",
+    "width": "100%",
+    "stretching": "fill",
+    "autostart": false,
+    "repeat": true,
+    "controls": false,
+    "mute": true
+});
+
+jwplayer("KBDemoVid").setup({
+    "skin": {
+        "name": "kineticbeats"
+    },
+    "file": "http://content.jwplatform.com/videos/t1AsHX3I-QtYW5DgW.mp4",
+    "image": "http://content.jwplatform.com/thumbs/t1AsHX3I-1280.jpg",
+    "width": "100%",
+    "stretching": "fill",
+    "autostart": false,
+    "repeat": true,
+    "controls": false,
+    "mute": true
+});
+
+
+// KineticBeats process video width
+$(document).ready(function() {
+    // Optimaisation: Store the references outside the event handler:
+    var $window = $(window);
+    var containersize = $(".l-centered-column").width();
+
+    function checkWidth() {
+        var windowsize = $window.width();
+        if ( windowsize > 900 ){
+            var marginLeft = (windowsize - containersize) / 2;
+            $(".KBProcessVidWrap").css({ marginLeft: marginLeft });
+        } else {
+            $(".KBProcessVidWrap").css({ marginLeft: 0 });
+        }
+    }
+
+    // Execute on load
+    checkWidth();
+    // Bind event listener
+    $(window).resize(checkWidth);
+});
+
+
+// Scrollmagic
+// init controller
+var controller = new ScrollMagic.Controller();
+function toggleKBProcessVid(event) {
+
+    if(event.type=="enter") {
+        jwplayer("KBProcessVid").play();
+    }
+    else if(event.type=="leave") {
+        jwplayer("KBProcessVid").pause();
+    }
+}
+
+var controller = new ScrollMagic.Controller();
+function toggleKBDemoVid(event) {
+
+    if(event.type=="enter") {
+        jwplayer("KBDemoVid").play();
+    }
+    else if(event.type=="leave") {
+        jwplayer("KBDemoVid").pause();
+    }
+}
+
+// add listeners
+new ScrollMagic.Scene({
+    triggerElement: "#KBProcessVid",
+    duration: 700
+}).on("enter leave", toggleKBProcessVid).addTo(controller);
+
+new ScrollMagic.Scene({
+    triggerElement: "#KBDemoVid",
+    duration: 700
+}).on("enter leave", toggleKBDemoVid).addTo(controller);
+

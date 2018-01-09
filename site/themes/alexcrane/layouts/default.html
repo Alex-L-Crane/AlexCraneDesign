@@ -12,6 +12,18 @@
     <title>{{ title }}  |  {{ site_name }}</title>
     <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,500,700" rel="stylesheet">
     <link rel="stylesheet" href="{{ theme:css }}">
+
+    <script src="https://content.jwplatform.com/libraries/nnW4H0Tg.js"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111771558-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-111771558-1');
+    </script>
 </head>
 
 <body>
@@ -19,6 +31,8 @@
         {{ template_content }}
     </section>
 
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.js"
             integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
             crossorigin="anonymous"></script>

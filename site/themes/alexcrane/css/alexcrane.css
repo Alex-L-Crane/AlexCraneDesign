@@ -199,6 +199,11 @@ th {
   display: table;
   clear: both; }
 
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both; }
+
 /* Screen reader text
 --------------------------------------------- */
 .srt {
@@ -345,25 +350,28 @@ h2 {
   margin-bottom: 0.111em; }
 
 h3 {
+  font-family: "Work Sans", sans-serif;
   font-size: 3rem;
   line-height: 1.127;
   font-weight: normal;
   margin-bottom: 0.333em; }
 
 h4 {
+  font-family: "Work Sans", sans-serif;
   font-size: 1.5rem;
   line-height: 1.667;
   font-weight: bold;
   margin-bottom: 0.333em; }
 
 h5 {
+  font-family: "Work Sans", sans-serif;
   font-size: 1.5rem;
   line-height: 1.667;
   font-weight: normal;
   margin-bottom: 0.333em; }
 
 h6 {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: light;
   margin-bottom: 0.333em; }
 
@@ -380,7 +388,6 @@ em {
 
 a {
   color: #596066;
-  font-weight: bold;
   text-decoration: none; }
 
 a:hover {
@@ -423,6 +430,26 @@ li {
   float: none;
   width: 100%;
   height: auto; }
+
+.l-fullwidth-section {
+  width: 100%;
+  float: left;
+  margin: 0; }
+  .l-fullwidth-section--white {
+    background-color: #FFFFFF; }
+  .l-fullwidth-section--black {
+    color: #FFFFFF;
+    background-color: #000000; }
+
+.l-centered-column {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px; }
+
+@media (min-width: 900px) {
+  .l-centered-column {
+    width: 960px;
+    padding: 0; } }
 
 .m-navbar {
   width: 100%;
@@ -684,5 +711,144 @@ li {
     opacity: 0.6; }
   .m-social {
     top: 104px; } }
+
+.m-work-info-container {
+  float: none;
+  width: 100%;
+  padding-top: 96px; }
+  .m-work-info-container h6 {
+    padding: 24px 0 56px 0; }
+
+.m-work-referencesketch {
+  width: 100%;
+  height: auto;
+  padding-top: 96px;
+  padding-bottom: 96px; }
+
+.m-work-small-textblock {
+  float: none;
+  width: 100%;
+  padding-right: 0;
+  float: left;
+  padding-bottom: 96px; }
+
+.m-work-med-textblock {
+  float: none;
+  width: 100%;
+  padding-top: 96px; }
+
+.m-work-twophotos {
+  padding-top: 96px; }
+  .m-work-twophotos__individual {
+    width: 100%;
+    padding-right: 0;
+    float: left; }
+  .m-work-twophotos img {
+    width: 100%;
+    height: auto; }
+
+.m-work-vid-wrap {
+  padding-top: 96px;
+  padding-bottom: 96px; }
+
+.m-work-vid {
+  width: 100%;
+  height: auto; }
+
+@media (min-width: 600px) {
+  .m-work-info-container {
+    width: 66.6666%; }
+  .m-work-small-textblock {
+    width: 50%;
+    padding-right: 72px;
+    float: left; }
+  .m-work-med-textblock {
+    width: 66.6666%; }
+  .m-work-twophotos__individual {
+    width: 50%;
+    padding-right: 10px; } }
+
+.m-kineticbeats-banner {
+  float: none;
+  width: 100%;
+  float: left; }
+  .m-kineticbeats-banner__stripe-1 {
+    height: 628px;
+    background-color: #E4ECF5;
+    margin: 0;
+    padding: 104px 0 0 0; }
+  .m-kineticbeats-banner__stripe-2 {
+    height: auto;
+    background-color: #A7B1BB;
+    margin: 0;
+    padding: 0 0 50px 0; }
+  .m-kineticbeats-banner__img-wrap {
+    width: 280px;
+    height: auto;
+    margin: -285px auto 0 auto;
+    padding: 0; }
+  .m-kineticbeats-banner__img {
+    width: 100%;
+    height: auto; }
+  .m-kineticbeats-banner h1 {
+    color: #ABBACD;
+    font-size: 4.5rem;
+    text-align: center;
+    padding: 0 20px; }
+
+.m-kineticbeats-info h3 {
+  color: #ABBACD; }
+
+.m-kineticbeats-altUI {
+  width: 260px;
+  margin: 0 auto;
+  padding-top: 96px;
+  padding-bottom: 96px; }
+  .m-kineticbeats-altUI img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px; }
+
+.m-kineticbeats-mainUI {
+  width: 260px;
+  margin: 0 auto;
+  padding-top: 0;
+  padding-bottom: 96px; }
+  .m-kineticbeats-mainUI img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px; }
+
+.m-work-96btm {
+  padding-bottom: 96px; }
+
+@media (min-width: 900px) {
+  .m-kineticbeats-banner__stripe-1 {
+    height: 768px;
+    padding: 104px 0 0 0; }
+  .m-kineticbeats-banner__stripe-2 {
+    height: 480px;
+    padding: 0; }
+  .m-kineticbeats-banner__img-wrap {
+    width: 420px;
+    margin: -435px auto 0 auto;
+    padding: 0; }
+  .m-kineticbeats-banner h1 {
+    font-size: 6rem;
+    text-align: center;
+    padding: 0; }
+  .m-kineticbeats-altUI {
+    width: 320px;
+    float: left;
+    margin: 0; }
+  .m-kineticbeats-mainUI {
+    width: 500px;
+    float: right;
+    margin: 0;
+    padding-top: 96px; }
+    .m-kineticbeats-mainUI img {
+      width: 100%;
+      height: auto;
+      margin-bottom: 20px; } }
 
 /*# sourceMappingURL=alexcrane.css.map */

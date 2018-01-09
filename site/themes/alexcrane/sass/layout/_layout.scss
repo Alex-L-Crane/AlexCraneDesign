@@ -1,0 +1,71 @@
+//------------------------------------
+//    #Layout
+//------------------------------------
+
+.l-page-wrap {
+	position: relative;
+	overflow-y:hidden;
+	overflow-x:hidden;
+	height: 100%;
+}
+
+.l-hero-wrap {
+	@include size1of1();
+	position: relative;
+	height: 100vh;
+	overflow-y:hidden;
+	overflow-x:hidden;
+	display: block;
+}
+
+.l-content{
+	position: relative;
+	@include size1of1();
+	height: auto;
+}
+
+.l-footer{
+	position: relative;
+	@include size1of1();
+	height: auto;
+}
+
+.l-fullwidth-section {
+	width: 100%;
+	float: left;
+	margin: 0;
+	@include m(white) {
+		background-color: $white;
+	}
+	@include m(black) {
+		color: $white;
+		background-color: $black;
+	}
+	//padding: 160px 0;
+
+}
+
+.l-centered-column {
+	width: 100%;
+	margin: 0 auto;
+	padding: 0 20px;
+}
+
+
+//    600px min width
+//------------------------------------
+
+@media (min-width: $breakpoint-tablet) {
+
+}
+
+
+//    900px min width
+//------------------------------------
+
+@media (min-width: $breakpoint-tablet-large) {
+	.l-centered-column {
+		width: 960px;
+		padding: 0;
+	}
+}

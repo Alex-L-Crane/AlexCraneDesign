@@ -1,0 +1,59 @@
+{{ banner | markdown }}
+
+<section style="width: 100%; background-color: #fff; margin: 0; padding: 160px 0; float: left;">
+    <section class="body-content" style="width: 960px; margin: 0 auto;">
+        <div style="width: 66%;">
+            <h3 style="color: #ABBACD;">
+                {{ introheading }}
+            </h3>
+            <h6 style="padding: 24px 0 56px 0;">
+                {{ projecttype }}<br>
+                {{ projectskills}}
+            </h6>
+            {{ introtext | markdown }}
+        </div>
+
+        {{ referencesketch }}
+        <img src="{{ value }}" style="width: 100%; height: auto; margin: 96px 0;"/>
+        {{ /referencesketch }}
+
+        <section>
+            <div style="width: 50%; padding-right: 72px; float: left;">
+                {{ roles | markdown }}
+            </div>
+            <div style="width: 50%; padding-right: 72px; float: left;">
+                {{ discovery | markdown }}
+            </div>
+            <div style="clear: both;"></div>
+        </section>
+    </section>
+</section>
+
+
+
+
+<section style="width: 100%; background-color: #000; margin: 0; padding: 160px 0; float: left;">
+    <section style="width: 960px; margin: 0 auto; color: #fff;">
+        <div style="width: 66%;">
+            {{ conceptulization | markdown }}
+        </div>
+
+        <section style="padding: 48px 0;">
+            {{ bwphotosection | markdown }}
+        </section>
+
+        <div style="color: #fff; width: 66%;">
+            {{ visualdesign | markdown  }}
+        </div>
+    </section>
+    <section style="height: 800px; padding-top: 80px; position: relative;">
+        {{ video1 }}
+    </section>
+    <section style="width: 960px; margin: 360px auto 0 auto;">
+        <p>Default work template</p>
+    </section>
+</section>
+
+<section style="width: 100%; background-color: #fff; margin: 0; padding: 0; float: left;">
+    {{ video2 }}
+</section>

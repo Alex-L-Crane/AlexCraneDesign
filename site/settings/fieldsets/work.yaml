@@ -1,0 +1,142 @@
+title: work
+fields:
+  template:
+    display: Template
+    type: template
+    instructions: To create new template, replicate and rename default "work" template
+  heroimage:
+    display: Hero image
+    type: assets
+    container: main
+    instructions: Template - {{ heroimage }}
+  introheading:
+    display: Heading for intro
+    type: text
+    instructions: Example "Beat Making App"
+  projecttype:
+    display: Subheading project type
+    type: text
+    instructions: Example "Personal Project _"
+  projectskills:
+    display: Subheading project skillset
+    type: text
+    instructions: Example "UX/UI Design and Development"
+  introtext:
+    display: Introduction paragraph
+    type: markdown
+    instructions: Project overview
+  referencesketch:
+    display: Reference sketch
+    type: assets
+    container: main
+    instructions: Template - {{ referencesketch }}
+  roles:
+    display: Roles
+    type: markdown
+    default: |
+      Roles
+
+      Paragraph here
+    instructions: Team or solo project task delegation info
+  discovery:
+    display: Discovery
+    type: markdown
+    default: |
+      Discovery
+
+      Paragraph here
+    instructions: Research and preparation info
+  conceptulization:
+    display: Conceptulization
+    type: markdown
+    default: |
+      Conceptulization
+
+      Paragraph here
+    instructions: Ideation and prototyping info
+  bwphotos:
+    display: Black and white photos
+    type: assets
+    container: main
+    instructions: Template - {{ bwphotos }}
+  visualdesign:
+    display: Visual design
+    type: markdown
+    default: |
+      Visual design
+
+      Paragraph here
+    instructions: Visual design process info
+  video1:
+    display: Video 1 identifier
+    type: text
+    instructions: Id to be refernced by JWPlayer JS. Template - {{ video1 }}
+  videowrap1:
+    display: Video 1 wrapper class
+    type: text
+    instructions: Class applied to video 1 wrapper. Template - {{ videowrap1 }}
+    show_when:
+      video1: not null
+  designphotos1:
+    display: Design photos 1
+    instructions: Template - {{ designphotos1 }}
+    type: assets
+    container: main
+  designphotos2:
+    display: Design photos 2
+    instructions: Template - {{ designphotos2 }}
+    type: assets
+    container: main
+  designphotos3:
+    display: Design photos 3
+    instructions: Template - {{ designphotos3 }}
+    type: assets
+    container: main
+  designphotos4:
+    display: Design photos 4
+    instructions: Template - {{ designphotos4 }}
+    type: assets
+    container: main
+  development:
+    display: Development
+    type: markdown
+    default: |
+      Development
+
+      Paragraph here
+    instructions: Dev/coding info
+  summary:
+    display: summary
+    type: markdown
+    instructions: video or additional images
+    default: summary
+  video2:
+    display: Video 2 identifier
+    type: text
+    instructions: Id to be refernced by JWPlayer JS. Template - {{ video2 }}
+  videowrap2:
+    display: Video 2 wrapper class
+    type: text
+    instructions: Class applied to video 2 wrapper. Template - {{ videowrap2 }}
+    show_when:
+      video2: not null
+  video3:
+    display: Video 3 identifier
+    type: text
+    instructions: Id to be refernced by JWPlayer JS. Template - {{ video3 }}
+  videowrap3:
+    display: Video 3 wrapper class
+    type: text
+    instructions: Class applied to video 3 wrapper. Template - {{ videowrap3 }}
+    show_when:
+      video3: not null
+  video4:
+    display: Video 4 identifier
+    type: text
+    instructions: Id to be refernced by JWPlayer JS. Template - {{ video4 }}
+  videowrap4:
+    display: Video 4 wrapper class
+    type: text
+    instructions: Class applied to video 4 wrapper. Template - {{ videowrap4 }}
+    show_when:
+      video4: not null

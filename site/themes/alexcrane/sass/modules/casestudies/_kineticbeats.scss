@@ -1,0 +1,122 @@
+//------------------------------------
+//    #KineticBeats
+//------------------------------------
+
+.m-kineticbeats-banner {
+    @include size1of1();
+    float: left;
+    @include e(stripe-1) {
+        height: 628px;
+        background-color: $kb-light-gray;
+        margin: 0;
+        padding: 104px 0 0 0;
+    }
+    @include e(stripe-2) {
+        height: auto;
+        background-color: $kb-dark-gray;
+        margin: 0;
+        padding: 0 0 50px 0;
+    }
+    @include e(img-wrap) {
+        width: 280px;
+        height: auto;
+        margin: -285px auto 0 auto;
+        padding: 0;
+    }
+    @include e(img) {
+        width: 100%;
+        height: auto;
+    }
+    & h1{
+        color: $kb-med-gray;
+        font-size: 4.5rem;
+        text-align: center;
+        padding: 0 20px;
+    }
+}
+
+.m-kineticbeats-info {
+    & h3 {
+        color: $kb-med-gray;
+    }
+}
+
+.m-kineticbeats-altUI {
+    width: 260px;
+    margin: 0 auto;
+    @include top-96;
+    @include bottom-96;
+    & img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+    }
+}
+
+.m-kineticbeats-mainUI {
+    width: 260px;
+    margin: 0 auto;
+    padding-top: 0;
+    @include bottom-96;
+    & img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+    }
+}
+
+.m-work-96btm {
+    @include bottom-96;
+}
+
+//    600px min width
+//------------------------------------
+
+@media (min-width: $breakpoint-tablet) {
+
+}
+
+
+//    900px min width
+//------------------------------------
+
+@media (min-width: $breakpoint-tablet-large) {
+    .m-kineticbeats-banner {
+        @include e(stripe-1) {
+            height: 768px;
+            padding: 104px 0 0 0;
+        }
+        @include e(stripe-2) {
+            height: 480px;
+            padding: 0;
+        }
+        @include e(img-wrap) {
+            width: 420px;
+            margin: -435px auto 0 auto;
+            padding: 0;
+        }
+        & h1{
+            font-size: $font-size-h1;
+            text-align: center;
+            padding: 0;
+        }
+    }
+
+    .m-kineticbeats-altUI {
+        width: 320px;
+        float: left;
+        margin: 0;
+    }
+
+    .m-kineticbeats-mainUI {
+        width: 500px;
+        float: right;
+        margin: 0;
+        @include top-96;
+        & img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+    }
+}
