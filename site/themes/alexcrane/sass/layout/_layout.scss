@@ -22,6 +22,10 @@
 	position: relative;
 	@include size1of1();
 	height: auto;
+	@include e(home) {
+		padding: 10px 0;
+		@extend %clearfix;
+	}
 }
 
 .l-footer{
@@ -41,8 +45,6 @@
 		color: $white;
 		background-color: $black;
 	}
-	//padding: 160px 0;
-
 }
 
 .l-centered-column {
@@ -56,7 +58,11 @@
 //------------------------------------
 
 @media (min-width: $breakpoint-tablet) {
-
+	.l-content{
+		@include e(home) {
+			padding: 10px;
+		}
+	}
 }
 
 
@@ -64,6 +70,12 @@
 //------------------------------------
 
 @media (min-width: $breakpoint-tablet-large) {
+	.l-content{
+
+		@include e(home) {
+			padding: 140px 50px 0 50px;
+		}
+	}
 	.l-centered-column {
 		width: 960px;
 		padding: 0;

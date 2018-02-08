@@ -29,8 +29,11 @@
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: rgba( $dark-gray, 0.45);
-    background-blend-mode: multiply;
+    background: -webkit-gradient(linear, left bottom, right top, from($base-blue), to($black));
+    opacity: 0.25;
+    //mix-blend-mode: color;
+    //background-color: rgba( $dark-gray, 0.4);
+    //background-blend-mode: multiply;
     z-index: 800;
 }
 
@@ -83,7 +86,7 @@
 
 .m-moon {
     width: 100%;
-    z-index: 960;
+    z-index: 760;
     @include e(wrap) {
         height: 20%;
         position: absolute;
@@ -108,7 +111,7 @@
         bottom: 0;
         left: 0;
         z-index: 0;
-        background: -webkit-gradient(linear, left bottom, right top, from($base-blue), to($black));
+        background: -webkit-gradient(linear, left bottom, right top, from($white), to($dark-gray));
     }
     @include e(layer) {
         width: 100%;

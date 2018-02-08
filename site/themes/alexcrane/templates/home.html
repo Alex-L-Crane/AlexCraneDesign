@@ -1,16 +1,27 @@
 {{ partial:home/hero-astronaut }}
 
-<section  class="l-content" style="background-color: #000000;">
-    <section style="padding: 50px">
-        <div style=""><img src="{{ test_panel_1 }}" style="width: 48%; height: auto; float: left; margin-right: 2%; margin-bottom: 4%;"/></div>
-        <div style=""><img src="{{ test_panel_2 }}" style="width: 48%; height: auto; float: left; margin-left: 2%; margin-bottom: 4%;"/></div>
-        <div style=""><img src="{{ test_panel_3 }}" style="width: 48%; height: auto; float: left; margin-right: 2%; margin-bottom: 4%;"/></div>
-        <div style=""><img src="{{ test_panel_4 }}" style="width: 48%; height: auto; float: left; margin-left: 2%; margin-bottom: 4%;"/></div>
-        <div style=""><img src="{{ test_panel_5 }}" style="width: 48%; height: auto; float: left; margin-right: 2%; margin-bottom: 4%;"/></div>
-        <div style=""><img src="{{ test_panel_6 }}" style="width: 48%; height: auto; float: left; margin-left: 2%; margin-bottom: 4%;"/></div>
-        <div style="clear: both;"></div>
-    </section>
+<section  class="l-content l-content__home" style="background-color: #000000;">
+    {{ collection:work }}
+    <div class="m-home-panel__wrap">
+        <a class="m-home-panel__link"
+           {{if active }} href="{{ url }}" {{/if}}>
+            {{ preview_overlay }}
+            <div class="m-home-panel__label-wrap" style="background-image: url('{{ value }}')">
+            {{ /preview_overlay }}
+                <h4 class="m-home-panel__label-h4">{{ title }}</h4>
+                <p class="m-home-panel__p">{{ projectskills }}</p>
+            </div>
+        </a>
+        {{ preview_image }}
+        <img src="{{ value }}" class="m-home-panel__img"/>
+        {{ /preview_image }}
+    </div>
+    {{ /collection:work }}
 </section>
 
+
+{{ section:page_scripts }}
+<script src="/site/themes/alexcrane/js/vendor/particles.js"></script>
+{{ /section:page_scripts }}
 
 

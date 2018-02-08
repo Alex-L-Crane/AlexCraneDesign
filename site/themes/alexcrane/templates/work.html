@@ -1,59 +1,60 @@
-{{ banner | markdown }}
+{{ partial:work/kineticbeats/kineticbeats-banner }}
 
-<section style="width: 100%; background-color: #fff; margin: 0; padding: 160px 0; float: left;">
-    <section class="body-content" style="width: 960px; margin: 0 auto;">
-        <div style="width: 66%;">
-            <h3 style="color: #ABBACD;">
+<section class="l-fullwidth-section l-fullwidth-section--white">
+    <section class="l-centered-column">
+        <div class="m-work-info-container m-kineticbeats-info">
+            <h3>
                 {{ introheading }}
             </h3>
-            <h6 style="padding: 24px 0 56px 0;">
+            <h6>
                 {{ projecttype }}<br>
-                {{ projectskills}}
+                {{ projectskills }}
             </h6>
             {{ introtext | markdown }}
         </div>
 
         {{ referencesketch }}
-        <img src="{{ value }}" style="width: 100%; height: auto; margin: 96px 0;"/>
+        <img class="m-work-referencesketch" src="{{ value }}" />
         {{ /referencesketch }}
 
-        <section>
-            <div style="width: 50%; padding-right: 72px; float: left;">
+        <section class="clearfix ">
+            <div class="m-work-small-textblock">
                 {{ roles | markdown }}
             </div>
-            <div style="width: 50%; padding-right: 72px; float: left;">
+            <div class="m-work-small-textblock">
                 {{ discovery | markdown }}
             </div>
-            <div style="clear: both;"></div>
         </section>
     </section>
 </section>
 
-
-
-
-<section style="width: 100%; background-color: #000; margin: 0; padding: 160px 0; float: left;">
-    <section style="width: 960px; margin: 0 auto; color: #fff;">
-        <div style="width: 66%;">
+<section class="l-fullwidth-section l-fullwidth-section--black">
+    <section class="l-centered-column">
+        <div class="m-work-med-textblock">
             {{ conceptulization | markdown }}
         </div>
 
-        <section style="padding: 48px 0;">
-            {{ bwphotosection | markdown }}
-        </section>
+        {{ partial:work/work-bwphotos }}
 
-        <div style="color: #fff; width: 66%;">
+        <div class="m-work-med-textblock">
             {{ visualdesign | markdown  }}
         </div>
     </section>
-    <section style="height: 800px; padding-top: 80px; position: relative;">
-        {{ video1 }}
-    </section>
-    <section style="width: 960px; margin: 360px auto 0 auto;">
-        <p>Default work template</p>
-    </section>
+
+    <div class="m-work-vid-wrap {{ videowrap1 }}">
+        <div id='{{ video1 }}' class="m-work-vid">Loading the player...</div>
+    </div>
+
+    {{ partial:work/kineticbeats/kineticbeats-designsection }}
 </section>
 
-<section style="width: 100%; background-color: #fff; margin: 0; padding: 0; float: left;">
-    {{ video2 }}
+<section class="l-fullwidth-section">
+    <div class="{{ videowrap2 }}">
+        <div id='{{ video2 }}' class="m-work-vid">Loading the player...</div>
+    </div>
 </section>
+
+
+{{ section:page_scripts }}
+<script src="https://content.jwplatform.com/libraries/nnW4H0Tg.js"></script>
+{{ /section:page_scripts }}

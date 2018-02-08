@@ -19,6 +19,10 @@ elixir(function(mix) {
         'css/' + theme + '.css');
 
     mix.browserify([
-        'jabbascripts.js'
+        'index.js',
+        'animations.js',
+        'mediaplayers.js',
+        'scrolleffects.js',
+        'work.js',
     ], 'js/' + theme + '.js');
 });

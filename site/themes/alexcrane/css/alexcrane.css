@@ -194,7 +194,7 @@ th {
   font-weight: bold;
   font-style: normal; }
 
-.m-main-nav__wrap:after {
+.l-content__home:after, .m-main-nav__wrap:after {
   content: "";
   display: table;
   clear: both; }
@@ -312,7 +312,7 @@ th {
 body {
   background-color: #15222E;
   color: #15222E;
-  font-family: "LessSans", sans-serif;
+  font-family: roboto-slab, serif;
   font-size: 100%;
   font-weight: normal;
   line-height: 1.5;
@@ -325,7 +325,7 @@ html > body {
   clear: both; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "LessSans", sans-serif;
+  font-family: roboto-slab, serif;
   font-weight: normal;
   letter-spacing: -0.02em;
   vertical-align: baseline;
@@ -334,37 +334,39 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0; }
 
 h1 {
-  font-family: "Work Sans", sans-serif;
   font-size: 6rem;
   line-height: 1.083;
+  font-family: "neuzeit-grotesk",sans-serif;
+  font-style: normal;
   font-weight: 700;
   margin-bottom: 0.167em; }
   h1.uppercase {
     text-transform: uppercase; }
 
 h2 {
-  font-family: "Work Sans", sans-serif;
+  font-family: europa, sans-serif;
   font-size: 4rem;
   line-height: 1.222;
   font-weight: 500;
   margin-bottom: 0.111em; }
 
 h3 {
-  font-family: "Work Sans", sans-serif;
   font-size: 3rem;
   line-height: 1.127;
-  font-weight: normal;
+  font-family: "neuzeit-grotesk",sans-serif;
+  font-style: normal;
+  font-weight: 400;
   margin-bottom: 0.333em; }
 
 h4 {
-  font-family: "Work Sans", sans-serif;
+  font-family: "neuzeit-grotesk",sans-serif;
   font-size: 1.5rem;
   line-height: 1.667;
-  font-weight: bold;
+  font-weight: 400;
   margin-bottom: 0.333em; }
 
 h5 {
-  font-family: "Work Sans", sans-serif;
+  font-family: europa, sans-serif;
   font-size: 1.5rem;
   line-height: 1.667;
   font-weight: normal;
@@ -377,7 +379,9 @@ h6 {
 
 p {
   line-height: 1.778;
-  margin-bottom: 1.778em; }
+  margin-bottom: 1.778em;
+  font-style: normal;
+  font-weight: 200; }
 
 strong {
   color: #596066;
@@ -424,6 +428,8 @@ li {
   float: none;
   width: 100%;
   height: auto; }
+  .l-content__home {
+    padding: 10px 0; }
 
 .l-footer {
   position: relative;
@@ -446,7 +452,13 @@ li {
   margin: 0 auto;
   padding: 0 20px; }
 
+@media (min-width: 600px) {
+  .l-content__home {
+    padding: 10px; } }
+
 @media (min-width: 900px) {
+  .l-content__home {
+    padding: 140px 50px 0 50px; }
   .l-centered-column {
     width: 960px;
     padding: 0; } }
@@ -519,6 +531,93 @@ li {
   .m-navbar {
     display: none; } }
 
+.m-home-panel__wrap {
+  width: 100%;
+  height: auto;
+  float: left;
+  margin-bottom: 20px;
+  overflow: hidden;
+  position: relative; }
+  .m-home-panel__wrap:nth-child(odd) {
+    margin-right: 0; }
+  .m-home-panel__wrap a:hover {
+    text-decoration: none; }
+
+.m-home-panel__link {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 200; }
+  .m-home-panel__link .m-home-panel__label-wrap {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    padding-top: 5%;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 1;
+    transition: height 0.8s ease-in-out, padding-top 0.5s ease-in-out, opacity 0.8s ease-in-out; }
+
+.m-home-panel__label-h4 {
+  color: #f2f4f5;
+  text-align: center;
+  padding-bottom: 0;
+  margin-bottom: 5px;
+  text-decoration: none; }
+
+.m-home-panel__p {
+  width: 80%;
+  color: #f2f4f5;
+  margin: 0 auto;
+  padding-top: 6px;
+  border-top: 1px solid rgba(242, 244, 245, 0.3);
+  text-align: center;
+  text-decoration: none; }
+
+.m-home-panel__img {
+  width: 100%;
+  height: auto;
+  display: block;
+  position: relative;
+  z-index: 100; }
+
+@media (min-width: 600px) {
+  .m-home-panel__wrap {
+    width: 49.5%;
+    margin-bottom: 10px; }
+    .m-home-panel__wrap:nth-child(odd) {
+      margin-right: 1%; } }
+
+@media (min-width: 900px) {
+  .m-home-panel__wrap {
+    width: 42%;
+    margin-bottom: 4%; }
+    .m-home-panel__wrap:nth-child(odd) {
+      margin-right: 4%;
+      margin-left: 6%; }
+  .m-home-panel__link .m-home-panel__label-wrap {
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    padding-top: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    background-origin: border-box;
+    background-repeat: no-repeat;
+    background-size: cover; }
+  .m-home-panel__link:hover .m-home-panel__label-wrap {
+    height: 100%;
+    padding-top: 8%; }
+  .m-home-panel__label-h4 {
+    padding-bottom: 10px;
+    margin-bottom: 0.333em; }
+  .m-home-panel__p {
+    width: 60%;
+    padding-top: 20px; } }
+
 .m-home-logo__logo-wrap {
   width: 70%;
   height: auto;
@@ -543,8 +642,8 @@ li {
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: rgba(21, 34, 46, 0.45);
-  background-blend-mode: multiply;
+  background: -webkit-gradient(linear, left bottom, right top, from(#ABBACD), to(#000000));
+  opacity: 0.25;
   z-index: 800; }
 
 .m-astronaut__wrap {
@@ -592,7 +691,7 @@ li {
 
 .m-moon {
   width: 100%;
-  z-index: 960; }
+  z-index: 760; }
   .m-moon__wrap {
     height: 20%;
     position: absolute;
@@ -613,7 +712,7 @@ li {
   bottom: 0;
   left: 0;
   z-index: 0;
-  background: -webkit-gradient(linear, left bottom, right top, from(#ABBACD), to(#000000)); }
+  background: -webkit-gradient(linear, left bottom, right top, from(#FFFFFF), to(#15222E)); }
 
 .m-hero-bg__layer {
   width: 100%;
@@ -850,5 +949,41 @@ li {
       width: 100%;
       height: auto;
       margin-bottom: 20px; } }
+
+.m-elixys-banner {
+  float: none;
+  width: 100%;
+  height: 700px;
+  float: left;
+  position: relative;
+  overflow: hidden; }
+  .m-elixys-banner__bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    background: transparent;
+    border: none;
+    z-index: 0; }
+  .m-elixys-banner__headingwrap {
+    padding: 104px 0 0 0; }
+  .m-elixys-banner h1 {
+    color: #F2f4f5;
+    font-size: 4.5rem;
+    text-align: center;
+    padding: 0 20px;
+    z-index: 100;
+    position: relative; }
+
+@media (min-width: 900px) {
+  .m-elixys-banner h1 {
+    font-size: 6rem;
+    text-align: center;
+    padding: 0; } }
 
 /*# sourceMappingURL=alexcrane.css.map */

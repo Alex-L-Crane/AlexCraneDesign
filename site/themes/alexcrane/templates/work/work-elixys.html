@@ -1,0 +1,60 @@
+{{ partial:work/elixys/elixys-banner }}
+
+<section class="l-fullwidth-section l-fullwidth-section--white">
+    <section class="l-centered-column">
+        <div class="m-work-info-container">
+            <h3>
+                {{ introheading }}
+            </h3>
+            <h6>
+                {{ projecttype }}<br>
+                {{ projectskills}}
+            </h6>
+            {{ introtext | markdown }}
+        </div>
+
+        {{ referencesketch }}
+        <img class="m-work-referencesketch" src="{{ value }}" />
+        {{ /referencesketch }}
+
+        <section class="clearfix ">
+            <div class="m-work-small-textblock">
+                {{ roles | markdown }}
+            </div>
+            <div class="m-work-small-textblock">
+                {{ discovery | markdown }}
+            </div>
+        </section>
+    </section>
+</section>
+
+<section class="l-fullwidth-section l-fullwidth-section--black">
+    <section class="l-centered-column">
+        <div class="m-work-med-textblock">
+            {{ conceptulization | markdown }}
+        </div>
+
+        {{ partial:work/work-bwphotos }}
+
+        <div class="m-work-med-textblock">
+            {{ visualdesign | markdown  }}
+        </div>
+    </section>
+
+    <div class="m-work-vid-wrap {{ videowrap1 }}">
+        <div id='{{ video1 }}' class="m-work-vid">Loading the player...</div>
+    </div>
+
+    {{ partial:work/kineticbeats/kineticbeats-designsection }}
+</section>
+
+<section class="l-fullwidth-section">
+    <div class="{{ videowrap2 }}">
+        <div id='{{ video2 }}' class="m-work-vid">Loading the player...</div>
+    </div>
+</section>
+
+
+{{ section:page_scripts }}
+<script src="https://content.jwplatform.com/libraries/nnW4H0Tg.js"></script>
+{{ /section:page_scripts }}

@@ -1,5 +1,17 @@
 title: work
 fields:
+  preview_image:
+    display: Hopepage preview tile
+    type: assets
+    container: main
+  preview_overlay:
+    display: Hopepage preview hover
+    type: assets
+    container: main
+  active:
+    display: Page active
+    type: toggle
+    instructions: Toggle on to link to page from homepage
   template:
     display: Template
     type: template
@@ -9,6 +21,11 @@ fields:
     type: assets
     container: main
     instructions: Template - {{ heroimage }}
+  bannerbg:
+    display: Banner Background
+    type: assets
+    container: main
+    instructions: Template - {{ bannerbg }}
   introheading:
     display: Heading for intro
     type: text
